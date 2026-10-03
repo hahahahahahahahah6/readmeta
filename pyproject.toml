@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "readmeta"
+version = "0.1.0"
+description = "Check that your README will actually render on PyPI — inspects the built artifact, not the repo"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "hao li"}]
+keywords = ["pypi", "readme", "packaging", "ci", "twine"]
+
+[project.scripts]
+readmeta = "readmeta.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/readmeta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["readmeta*"]
