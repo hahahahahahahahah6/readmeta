@@ -488,4 +488,4 @@ def test_python_m_module(monkeypatch, capsys):
     with pytest.raises(SystemExit) as e:
         runpy.run_module("readmeta", run_name="__main__")
     assert e.value.code == 0
-    assert "0.1.1" in capsys.readouterr().out
+    assert "0.2.0" in capsys.readouterr().out
